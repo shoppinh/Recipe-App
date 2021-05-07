@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #ece9e6;
+
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.mobile-container {
+  background-color: #fff;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: inherit;
+}
+header input {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+header button {
+  background-color: transparent;
+  color: #aaa;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+.fav-container {
+  background-color: rgb(166, 207, 154);
+  padding: 10px 24px 0 24px;
+  text-align: center;
+  position: relative;
+  height: 250px;
+}
+.fav-slider {
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+}
+.fav-meals {
+  position: absolute;
+  top: 25px;
+  left: -2px;
+  height: 100%;
+  display: flex;
+  /* pointer-events: none; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.fav-meals li {
+  height: 100%;
+  width: 80px;
+  text-align: center;
+  margin: 0 8px;
+  position: relative;
+  transition: 0.5s;
+}
+.fav-meals li img {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px 2px #3333331a;
+  width: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fav-meals li img:hover {
+  cursor: pointer;
+}
+.fav-meals li span {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0 2px;
+}
+.meal {
+  border-radius: 3px;
+  box-shadow: 0 0 10px 2px #3333331a;
+  margin: 1.5rem;
+}
+.meal-header {
+  position: relative;
+}
+.meal-header .random {
+  position: absolute;
+  top: 10px;
+  left: -1px;
+  background-color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.meal img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+.meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.meal-body h4 {
+  margin: 0;
+}
+.meal-body .fav-btn {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  cursor: pointer;
+}
+.meal-body .fav-btn.active {
+  color: red;
+}
+
+.meal-info-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.meal-info {
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+  overflow: auto;
+  padding: 0 2rem;
+  max-height: 100vh;
+  border-radius: 5px;
+  position: relative;
+}
+.meal-info img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.meal-info h1 {
+  text-align: center;
+}
+.meal-info .close-popup,
+.remove-fav {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+}
+.remove-fav {
+  top: -1rem;
+  right: -1rem;
+  opacity: 0;
+}
+.fav-meals li .remove-fav:hover {
+  opacity: 1;
+}
+.meal-info-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.slideRight,
+.slideLeft {
+  position: absolute;
+  top: 125px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.slideRight {
+  right: 0;
+}
+.slideLeft {
+  left: 0;
+}
